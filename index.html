@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Super Cute Pink Notebook - Mujgan</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
+
+*{box-sizing:border-box;margin:0;padding:0;}
+body{
+  font-family:'Comic Neue', cursive;
+  background: linear-gradient(135deg,#ffe6f0,#ffcce0);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  overflow:hidden;
+}
+
+.book{
+  width:95%;
+  max-width:480px;
+  height:95vh;
+  background:#fff0f6;
+  border-radius:30px;
+  box-shadow:0 12px 35px rgba(0,0,0,0.25);
+  overflow:hidden;
+  position:relative;
+  border:4px dashed #ffb6c1;
+}
+
+/* Pages */
+.page{
+  width:100%;
+  height:100%;
+  padding:40px;
+  display:none;
+  flex-direction:column;
+  justify-content:flex-start;
+  align-items:center;
+  text-align:center;
+  font-size:1.25em;
+  border-radius:25px;
+  position:absolute;
+  top:0;
+  left:0;
+  overflow-y:auto;
+  box-shadow:0 8px 25px rgba(0,0,0,0.15);
+  background:linear-gradient(135deg,#ffe6f0,#ffcce0);
+  border:3px solid #ff99aa;
+  animation:fadeIn 0.6s ease;
+}
+.page.active{display:flex;}
+@keyframes fadeIn{from{opacity:0;transform:scale(0.95);}to{opacity:1;transform:scale(1);}}
+
+.header{
+  font-size:2em;
+  color:#ff4f79;
+  margin-bottom:20px;
+  text-shadow:1px 1px 3px #fff;
+  animation:pop 0.5s ease;
+}
+@keyframes pop{0%{transform:scale(0.8);}100%{transform:scale(1);}}
+
+.content{
+  font-size:1.2em;
+  line-height:1.6;
+  color:#d6336c;
+  margin-top:15px;
+  text-align:center;
+}
+
+/* Scrollbar */
+.page::-webkit-scrollbar { width:8px;}
+.page::-webkit-scrollbar-track{background:#ffcce0;border-radius:10px;}
+.page::-webkit-scrollbar-thumb{background:#ff99aa;border-radius:10px;}
+
+/* Navigation */
+.nav{
+  position:absolute;
+  bottom:15px;
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  padding:0 20px;
+}
+.btn{
+  background:#ffb6c1;
+  border:none;
+  padding:12px 25px;
+  border-radius:20px;
+  font-size:1.1em;
+  cursor:pointer;
+  box-shadow:0 4px 15px rgba(0,0,0,0.15);
+  transition:0.3s;
+}
+.btn:hover{background:#ff7cae;}
+
+/* Floating hearts */
+.heart{
+  position:absolute;
+  width:18px;
+  height:18px;
+  background:red;
+  transform:rotate(-45deg);
+  animation:float 5s linear infinite;
+}
+.heart::before,.heart::after{
+  content:'';
+  position:absolute;
+  width:18px;
+  height:18px;
+  background:red;
+  border-radius:50%;
+}
+.heart::before{top:-9px;left:0;}
+.heart::after{left:9px;top:0;}
+@keyframes float{0%{transform:translateY(0) rotate(-45deg);opacity:1;}100%{transform:translateY(-700px) rotate(-45deg);opacity:0;}}
+
+/* Cherry petals */
+.petal{
+  position:absolute;
+  width:12px;
+  height:12px;
+  background:pink;
+  border-radius:50%;
+  opacity:0.7;
+  animation:fall 7s linear infinite;
+}
+@keyframes fall{0%{transform:translateY(-50px) rotate(0deg);}100%{transform:translateY(700px) rotate(360deg);}}
+
+/* Stickers */
+.sticker{
+  position:absolute;
+  font-size:28px;
+  animation:floatSticker 6s linear infinite;
+}
+@keyframes floatSticker{0%{transform:translateY(0) rotate(0deg);}100%{transform:translateY(-500px) rotate(360deg);}}
+</style>
+</head>
+<body>
+<div class="book">
+
+<!-- Pages -->
+<div class="page active"><div class="header">🌸 The Day We Met (19 July)</div><div class="content">We first saw each other on Snapchat. That day felt magical ✨. I never thought one click would bring me my forever person 💖. From that moment, I called you mine in my heart, Mujgan 🐻</div></div>
+<div class="page"><div class="header">🎂 Your Birthday (18 July)</div><div class="content">You are the prettiest gift to this world 🌍. On your birthday, I feel lucky because you were born to make my life beautiful 💕. Happy Birthday my Princess 👑, Mujgan 🎀🎁</div></div>
+<div class="page"><div class="header">❤️ First I Love You (6 August)</div><div class="content">I said "I love you" first 💖, and you accepted on the same day 🌸. That was the sweetest moment of my life 🥹. Since then, every day is special, Mujgan 💌</div></div>
+<div class="page"><div class="header">😍 Nicknames</div><div class="content">You call me Pookieeeee, Stupid Babyyy, Hubby, My Love 💖. I call you Babyyy, Pookiee, Princess, Cutie, Wife 👑. These names are little pieces of our love 🥰, Mujgan 🐻</div></div>
+<div class="page"><div class="header">📸 First Picture Exchange (19 August)</div><div class="content">We shared our first pictures 🖼️. When I saw your smile, my heart melted instantly 💞. You looked like an angel 👼, Mujgan 💖</div></div>
+<div class="page"><div class="header">😅 Funny Prank (19 August)</div><div class="content">You tested my loyalty with a prank 🤨😂. I passed, of course, because I’m only yours 💍. That day proved how true my love is 🐻, Mujgan 💖</div></div>
+<div class="page"><div class="header">💕 Half Love Picture (27 August)</div><div class="content">When our fingers created a half-heart ❤️ and became one love picture, it showed we are truly connected, soul to soul ✨, Mujgan 💖</div></div>
+<div class="page"><div class="header">🍼 Childhood Photos (2 September)</div><div class="content">You sent me your baby pic 👶, and I sent mine. Both cute, but you are the cutest baby ever 😍🐻. I realized you’ve always been adorable 💖, Mujgan</div></div>
+<div class="page"><div class="header">✍️ English Learning (31 August)</div><div class="content">I started learning English just for you 📚💞. Every word I speak now feels like love letters only for you 💌, Mujgan 🌸</div></div>
+<div class="page"><div class="header">☎️ First Call (24 September)</div><div class="content">We talked on call for the first time 🥺. I was shy 😳, but hearing your voice made me fall for you again 💖, Mujgan 🐻</div></div>
+<div class="page"><div class="header">🤝 Our Promises</div><div class="content">We promised to call once every day, no matter what 🌸. These little promises build our forever 💞, Mujgan 💖</div></div>
+<div class="page"><div class="header">😎 Sweet Jealousy</div><div class="content">You feel jealous when I talk to other girls 😅. But that jealousy is cute, it only shows how much you love me 🐻💖, Mujgan 🌸</div></div>
+<div class="page"><div class="header">🌈 Future Dreams</div><div class="content">We dream of a life together 🏡, with love, laughter, maybe even a little cat 🐱. Our forever starts now 💖, Mujgan 💕</div></div>
+<div class="page"><div class="header">💞 Forever Together</div><div class="content">No matter the distance 🌍 (India–Azerbaijan), no matter the time ⏳, I will never let you go. You are my Babyyy, my Pookiee, my Princess, my Wife 💍. Forever and always 💖🐻, Mujgan 💖</div></div>
+
+<!-- Navigation -->
+<div class="nav"><button class="btn" onclick="prevPage()">⬅ Prev</button><button class="btn" onclick="nextPage()">Next ➡</button></div>
+</div>
+
+<script>
+let current=0;
+const pages=document.querySelectorAll('.page');
+function showPage(i){pages.forEach(p=>p.classList.remove('active'));pages[i].classList.add('active');}
+function nextPage(){current=(current+1)%pages.length;showPage(current);}
+function prevPage(){current=(current-1+pages.length)%pages.length;showPage(current);}
+
+// Floating hearts
+function createHeart(){
+  const heart=document.createElement('div');
+  heart.className='heart';
+  heart.style.left=Math.random()*window.innerWidth+'px';
+  heart.style.animationDuration=3+Math.random()*4+'s';
+  document.body.appendChild(heart);
+  setTimeout(()=>heart.remove(),7000);
+}
+setInterval(createHeart,400);
+
+// Cherry petals
+function createPetal(){
+  const petal=document.createElement('div');
+  petal.className='petal';
+  petal.style.left=Math.random()*window.innerWidth+'px';
+  petal.style.width=10+Math.random()*10+'px';
+  petal.style.height=10+Math.random()*10+'px';
+  document.body.appendChild(petal);
+  setTimeout(()=>petal.remove(),7000);
+}
+setInterval(createPetal,300);
+
+// Floating stickers
+function createSticker(){
+  const stickers=['🐻','🐱','🎀','✨','🌸'];
+  const sticker=document.createElement('div');
+  sticker.className='sticker';
+  sticker.textContent=stickers[Math.floor(Math.random()*stickers.length)];
+  sticker.style.left=Math.random()*window.innerWidth+'px';
+  document.body.appendChild(sticker);
+  setTimeout(()=>sticker.remove(),6000);
+}
+setInterval(createSticker,500);
+</script>
+</body>
+</html>
